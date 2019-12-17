@@ -248,7 +248,7 @@ server <- function(input, output, session) {
   
   output$plot4 <- renderPlot({
     
-    ggplot(y, aes(fill = y$Category, values = x$Percentage_r)) +
+    ggplot(y, aes(fill = y$Category, values = y$Percentage_r)) +
       geom_waffle(color = "white", size = .25, n_rows = 10, flip = TRUE) +
       facet_wrap(~Order.Year, nrow = 1, strip.position = "bottom") +
       scale_x_discrete() + 
